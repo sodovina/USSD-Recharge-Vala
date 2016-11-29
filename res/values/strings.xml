@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">     Recharge Pincodes Checker</string>
+
+    <string name="run_button">Ekzekuto</string>
+    <string name="open_button">Hap Filen</string>
+    <string name="dummy_content">PAYKOS</string>
+    <string name="console"></string>
+    <string name="description_label">Servisi merr te dhenat nga operatori dhe i ruan tek USSDCodeHandler. Eshte i sigurt per perdorim.</string>
+    <string name="accessibility_service_label">Vala - PAYKOS</string>
+</resources>
