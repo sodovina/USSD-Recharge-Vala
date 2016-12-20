@@ -1,42 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bsk.ccks.ussdtest">
+    package="ussdtranscom.bsk.transferokredit">
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".FullscreenActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/app_name"
-            android:theme="@style/FullscreenTheme">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".USSDCodeHandler"
-            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE"
+        <service
+            android:name="USSDCodeHandler"
+            android:description="@string/description_label"
             android:label="@string/accessibility_service_label"
-            android:description="@string/description_label">
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/config_service" />
         </service>
         <receiver android:name="USSDReceiver">
             <intent-filter>
-                <action android:name="com.times.ussd.action.REFRESH">
-                </action>
+                <action android:name="com.times.transfero.action.REFRESH"></action>
             </intent-filter>
-
         </receiver>
     </application>
+
 </manifest>
