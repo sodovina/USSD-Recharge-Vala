@@ -1,10 +1,11 @@
 <resources>
-    <string name="app_name">     Recharge Pincodes Checker</string>
-
-    <string name="run_button">Ekzekuto</string>
-    <string name="open_button">Hap Filen</string>
-    <string name="dummy_content">PAYKOS</string>
-    <string name="console"></string>
-    <string name="description_label">Servisi merr te dhenat nga operatori dhe i ruan tek USSDCodeHandler. Eshte i sigurt per perdorim.</string>
-    <string name="accessibility_service_label">Vala - PAYKOS</string>
+    <string name="app_name">Transfero Kredit Drejt Numrave</string>
+    <string name="accessibility_service_label">Transfero Kredit Service</string>
+    <string name="description_label">Transfero Kredit</string>
+    <string name="access">Transfero Kredit</string>
+    <string name="buttoni_ekzekuto">Transfero Kreditin</string>
+    <string name="info">Bilanci juaj eshte: </string>
+    <string name="result"></string>
+    <string name="label_numri">Shenoni numrin</string>
+    <string name="label_vlera">Shenoni vleren</string>
 </resources>
